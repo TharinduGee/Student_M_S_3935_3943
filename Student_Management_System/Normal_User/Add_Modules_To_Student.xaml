@@ -1,0 +1,65 @@
+﻿<Window x:Class="Student_Management_System.Normal_User.Add_Modules_To_Student"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_Management_System.Normal_User"
+        mc:Ignorable="d"
+        Title="Add_Modules_To_Student" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="Transparent" WindowStyle="None" AllowsTransparency="True" MouseDown="Drag">
+    <Border CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="\Images\admin.jpg"/>
+        </Border.Background>
+        <Grid>
+            <Border BorderBrush="Black" BorderThickness="5" Margin="30,30,30,30" Grid.ColumnSpan="3" Background="LightSlateGray"/>
+            <TextBlock Text="Search Student by ID" Margin="46,39,523,385" FontSize="15" FontStyle="Italic"/>
+            <TextBox HorizontalAlignment="Left" Height="26" Margin="46,70,0,0" TextWrapping="Wrap" Text="{Binding SelectedId}" VerticalAlignment="Top" Width="530"/>
+            <TextBlock Text="You selected :" Margin="46,101,685,325"/>
+            <TextBlock HorizontalAlignment="Left" Foreground="DarkSlateGray" FontWeight="Bold" Text="{Binding FirstName}" Height="19" TextWrapping="Wrap"  VerticalAlignment="Top" Width="113" Margin="123,101,0,0"/>
+            <TextBlock Text="Now, enter the Module ID to add it to the Student." Margin="236,101,169,318"/>
+            <DataGrid  HorizontalAlignment="Left" Height="206" Margin="209,174,0,0" VerticalAlignment="Top" Width="346" ItemsSource="{Binding SelectedModules}" />
+
+
+
+            <TextBox HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="{Binding SelectedModuleId}" VerticalAlignment="Top" Width="530" Margin="46,130,0,0"/>
+            <Button Width="157" Command="{Binding GetSelectedStudentCommand }" Margin="592,70,51,354" Height="26">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/click.png" Width="33" Height="18"/>
+                    <TextBlock Text="Select Student" Foreground="Black"/>
+                </StackPanel>
+
+            </Button>
+            <Button HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="157" Command="{Binding SelectModuleCommand}" Margin="592,130,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Images/click2.png" Width="33" Height="18"/>
+                    <TextBlock Text="Add Module" Foreground="Black"/>
+                </StackPanel>
+            </Button>
+
+            <StackPanel VerticalAlignment="Top">
+                <Image Source="/Images/bar.png" Stretch="Fill" Height="24" Width="1018" >
+
+                </Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="450" Margin="723,0,0,0" Width="77">
+
+                <Button Cursor="Hand" Style="{StaticResource MinButton}" Height="11" Width="30" Click="btnMinimize_Click" Margin="5 5 0 5" BorderBrush="Transparent" >
+                    <Image Source="/Images/min.png" Stretch="Fill"/>
+                </Button>
+                <Button Cursor="Hand" Width="30" Height="12" Style="{StaticResource QuitButton}" Click="Button_Click_1" Margin="5" BorderBrush="Transparent" >
+                    <Image Source="/Images/close.png" Stretch="Fill"/>
+                </Button>
+
+
+            </StackPanel>
+
+
+
+
+
+
+        </Grid>
+    </Border>
+
+
+</Window>

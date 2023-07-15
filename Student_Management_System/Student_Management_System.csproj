@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\admin.jpg" />
+    <None Remove="Images\bar.png" />
+    <None Remove="Images\Book.jpg" />
+    <None Remove="Images\book.png" />
+    <None Remove="Images\click.png" />
+    <None Remove="Images\click2.png" />
+    <None Remove="Images\close.png" />
+    <None Remove="Images\glass.jpg" />
+    <None Remove="Images\grades.png" />
+    <None Remove="Images\min.png" />
+    <None Remove="Images\Module.jpg" />
+    <None Remove="Images\modules.png" />
+    <None Remove="Images\normal.jpg" />
+    <None Remove="Images\save.png" />
+    <None Remove="Images\sms.jfif" />
+    <None Remove="Images\student.png" />
+    <None Remove="Images\User.jpg" />
+    <None Remove="Images\User.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\admin.jpg" />
+    <Resource Include="Images\bar.png" />
+    <Resource Include="Images\Book.jpg" />
+    <Resource Include="Images\book.png" />
+    <Resource Include="Images\click.png" />
+    <Resource Include="Images\click2.png" />
+    <Resource Include="Images\close.png" />
+    <Resource Include="Images\glass.jpg" />
+    <Resource Include="Images\grades.png" />
+    <Resource Include="Images\min.png" />
+    <Resource Include="Images\Module.jpg" />
+    <Resource Include="Images\modules.png" />
+    <Resource Include="Images\normal.jpg" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Images\sms.jfif" />
+    <Resource Include="Images\student.png" />
+    <Resource Include="Images\User.jpg" />
+  </ItemGroup>
+
+</Project>

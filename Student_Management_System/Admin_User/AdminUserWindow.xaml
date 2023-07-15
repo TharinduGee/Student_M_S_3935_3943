@@ -1,0 +1,51 @@
+﻿<Window x:Class="Student_Management_System.Admin_User.AdminUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Student_Management_System.Admin_User"
+        mc:Ignorable="d"
+        Title="AdminUserWindow" Height="580" Width="580" Background="Transparent" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" MouseDown="Drag">
+    <Border CornerRadius="20" BorderThickness="2" BorderBrush="Transparent">
+        <Border.Background>
+            <ImageBrush ImageSource="\Images\admin.jpg"/>
+        </Border.Background>
+        <Grid>
+            <StackPanel VerticalAlignment="Top">
+                <Image Source="/Images/bar.png" Stretch="Fill" Height="24" RenderTransformOrigin="0.5,0.5">
+
+                </Image>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="580" Margin="505,0,0,0">
+
+                <Button Cursor="Hand" Style="{StaticResource MinButton}" Height="11" Width="30" Click="Button_Click_2" Margin="5 5 0 5" BorderBrush="Transparent" >
+                    <Image Source="/Images/min.png" Stretch="Fill"/>
+                </Button>
+                <Button Cursor="Hand" Width="30" Height="12" Style="{StaticResource QuitButton}" Click="Button_Click_1" Margin="5" BorderBrush="Transparent" >
+                    <Image Source="/Images/close.png" Stretch="Fill"/>
+                </Button>
+
+
+            </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="5" Background="white" Margin="90,111,90,111">
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock TextWrapping="Wrap" Margin="20" Text="Create Normal Users" Style="{StaticResource MainHeader}"/>
+                    <StackPanel Height="284" Margin="20">
+                        <TextBlock TextWrapping="Wrap" Text="Username" Style="{StaticResource DetailTitle}"/>
+                        <TextBox TextWrapping="Wrap" Name="UsernameText" Style="{StaticResource DetailBox}" Width="328"/>
+                        <TextBlock TextWrapping="Wrap" Text="Password" Style="{StaticResource DetailTitle}"/>
+                        <PasswordBox Name="PasswordText" Style="{StaticResource DetailBox1}" Width="328"/>
+
+                        <Button Content="Create User" Click="Button_Click" Style="{StaticResource ControlButton}"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+
+
+        </Grid>
+
+    </Border>
+
+</Window>
