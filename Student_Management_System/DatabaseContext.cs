@@ -10,7 +10,7 @@ namespace Student_Management_System {
     public class DatabaseContext : DbContext{
 
         //path of the database
-        private readonly string _path = @"C:\Users\Tharindu\Downloads\Student_Management_System\Student_Management_System\Student_Management_System\Temp\Student.db";
+        private readonly string _path = Path.Combine(Environment.CurrentDirectory, @"..\..\..\Temp\Student.db");
 
         //override the onconfig method
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
